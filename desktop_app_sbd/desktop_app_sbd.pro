@@ -13,8 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    widgets/loginwidget.cpp \
+    widgets/changepassword.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    widgets/loginwidget.h \
+    widgets/changepassword.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    widgets/loginwidget.ui \
+    widgets/changepassword.ui
