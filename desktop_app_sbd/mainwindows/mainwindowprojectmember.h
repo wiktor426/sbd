@@ -15,6 +15,13 @@ public:
     explicit MainWindowProjectMember(QWidget *parent = 0);
     ~MainWindowProjectMember();
 
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButtonProjectInfo_clicked();
+
+    void on_pushButtonSearchSupply_clicked();
+
 private:
     Ui::MainWindowProjectMember *ui;
 };

@@ -16,14 +16,20 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     widgets/loginwidget.cpp \
     widgets/changepassword.cpp \
-    mainwindows/mainwindowprojectmember.cpp
+    mainwindows/mainwindowprojectmember.cpp \
+    widgets/supplyacceptrequest.cpp \
+    widgets/supplyrequestcancel.cpp
 
 HEADERS  += mainwindow.h \
     widgets/loginwidget.h \
     widgets/changepassword.h \
-    mainwindows/mainwindowprojectmember.h
+    mainwindows/mainwindowprojectmember.h \
+    widgets/supplyacceptrequest.h \
+    widgets/supplyrequestcancel.h
 
 FORMS    += mainwindow.ui \
     widgets/loginwidget.ui \
     widgets/changepassword.ui \
-    mainwindows/mainwindowprojectmember.ui
+    mainwindows/mainwindowprojectmember.ui \
+    widgets/supplyacceptrequest.ui \
+    widgets/supplyrequestcancel.ui
