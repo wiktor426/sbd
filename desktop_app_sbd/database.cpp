@@ -7,10 +7,11 @@ DataBase::DataBase(QObject *parent) :
 void DataBase::initDatabase(){
     database = QSqlDatabase::addDatabase("QMYSQL");
 
+    database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("viktork.linuxpl.info");
-    database.setDatabaseName("viktork_patryk");
-    database.setUserName("viktork_patryk");
-    database.setPassword("patryk123");
+    database.setDatabaseName("viktork_sbd");
+    database.setUserName("viktork_sbdadmin");
+    database.setPassword("haslo123");
     database.open();
     //Inform other objects that database was successfully opened
     if(database.isOpen()){

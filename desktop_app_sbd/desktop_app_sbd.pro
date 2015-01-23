@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     widgets/changepassword.cpp \
     mainwindows/mainwindowprojectmember.cpp \
     widgets/supplyacceptrequest.cpp \
-    widgets/supplyrequestcancel.cpp
+    widgets/supplyrequestcancel.cpp \
+    database.cpp
 
 HEADERS  += mainwindow.h \
     widgets/loginwidget.h \
     widgets/changepassword.h \
     mainwindows/mainwindowprojectmember.h \
     widgets/supplyacceptrequest.h \
-    widgets/supplyrequestcancel.h
+    widgets/supplyrequestcancel.h \
+    database.h
 
 FORMS    += mainwindow.ui \
     widgets/loginwidget.ui \
