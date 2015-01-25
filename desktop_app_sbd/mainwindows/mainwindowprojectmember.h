@@ -2,6 +2,9 @@
 #define MAINWINDOWPROJECTMEMBER_H
 
 #include <QMainWindow>
+#include <QSqlQuery>
+#include <assert.h>
+#include <QVariant>
 
 namespace Ui {
 class MainWindowProjectMember;
@@ -19,6 +22,12 @@ public:
     QString user_surname;
     QString user_password;
     QString project_name;
+    QString project_id;
+    void fillTreeWidgetProjectConstructions();
+    void fillTreeWidgetProjectSupplies();
+    void fillTreeWidgetUserSupplies();
+    void fillTreeWidgetProjectMembers();
+    void userLogged();
     void refreshLabels();
 
 private slots:
@@ -27,6 +36,7 @@ private slots:
     void on_pushButtonProjectInfo_clicked();
 
     void on_pushButtonSearchSupply_clicked();
+
 
 private:
     Ui::MainWindowProjectMember *ui;

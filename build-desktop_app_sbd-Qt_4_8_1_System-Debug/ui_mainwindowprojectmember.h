@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindowprojectmember.ui'
 **
-** Created: Thu Jan 22 15:49:06 2015
+** Created: Sun Jan 25 03:03:46 2015
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,7 +26,6 @@
 #include <QtGui/QSpacerItem>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
-#include <QtGui/QTableView>
 #include <QtGui/QTableWidget>
 #include <QtGui/QTreeWidget>
 #include <QtGui/QVBoxLayout>
@@ -59,8 +58,8 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QHBoxLayout *horizontalLayout_2;
-    QTreeWidget *treeWidgetUserConstruction;
-    QTableView *tableViewUserSupplies;
+    QTreeWidget *treeWidgetUserConstructions;
+    QTreeWidget *treeWidgetUserSupplies;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_2;
     QHBoxLayout *horizontalLayout;
@@ -79,12 +78,12 @@ public:
     QLabel *label_6;
     QLabel *label_7;
     QHBoxLayout *horizontalLayout_8;
-    QTreeWidget *treeWidgetProjectConstruction;
-    QTableView *tableViewProjectSupplies;
+    QTreeWidget *treeWidgetProjectConstructions;
+    QTreeWidget *treeWidgetProjectSupplies;
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_8;
+    QTreeWidget *treeWidgetProjectMembers;
     QHBoxLayout *horizontalLayout_10;
-    QTableWidget *tableWidgetProjectMembers;
     QWidget *tab_3;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
@@ -105,7 +104,7 @@ public:
     QLabel *label_16;
     QPushButton *pushButton_3;
     QLabel *label_9;
-    QListView *listView;
+    QListView *listViewSearchResults;
     QLabel *label_18;
     QLabel *label_17;
     QMenuBar *menubar;
@@ -164,7 +163,7 @@ public:
 
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(200, 0, 691, 481));
+        tabWidget->setGeometry(QRect(200, 0, 771, 481));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         verticalLayoutWidget_2 = new QWidget(tab);
@@ -205,18 +204,18 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        treeWidgetUserConstruction = new QTreeWidget(verticalLayoutWidget_2);
+        treeWidgetUserConstructions = new QTreeWidget(verticalLayoutWidget_2);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
-        treeWidgetUserConstruction->setHeaderItem(__qtreewidgetitem);
-        treeWidgetUserConstruction->setObjectName(QString::fromUtf8("treeWidgetUserConstruction"));
+        treeWidgetUserConstructions->setHeaderItem(__qtreewidgetitem);
+        treeWidgetUserConstructions->setObjectName(QString::fromUtf8("treeWidgetUserConstructions"));
 
-        horizontalLayout_2->addWidget(treeWidgetUserConstruction);
+        horizontalLayout_2->addWidget(treeWidgetUserConstructions);
 
-        tableViewUserSupplies = new QTableView(verticalLayoutWidget_2);
-        tableViewUserSupplies->setObjectName(QString::fromUtf8("tableViewUserSupplies"));
+        treeWidgetUserSupplies = new QTreeWidget(verticalLayoutWidget_2);
+        treeWidgetUserSupplies->setObjectName(QString::fromUtf8("treeWidgetUserSupplies"));
 
-        horizontalLayout_2->addWidget(tableViewUserSupplies);
+        horizontalLayout_2->addWidget(treeWidgetUserSupplies);
 
 
         verticalLayout_2->addLayout(horizontalLayout_2);
@@ -251,7 +250,7 @@ public:
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         verticalLayoutWidget_3 = new QWidget(tab_2);
         verticalLayoutWidget_3->setObjectName(QString::fromUtf8("verticalLayoutWidget_3"));
-        verticalLayoutWidget_3->setGeometry(QRect(0, 0, 471, 391));
+        verticalLayoutWidget_3->setGeometry(QRect(0, 0, 761, 391));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_3);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -302,18 +301,18 @@ public:
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        treeWidgetProjectConstruction = new QTreeWidget(verticalLayoutWidget_3);
+        treeWidgetProjectConstructions = new QTreeWidget(verticalLayoutWidget_3);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
         __qtreewidgetitem1->setText(0, QString::fromUtf8("1"));
-        treeWidgetProjectConstruction->setHeaderItem(__qtreewidgetitem1);
-        treeWidgetProjectConstruction->setObjectName(QString::fromUtf8("treeWidgetProjectConstruction"));
+        treeWidgetProjectConstructions->setHeaderItem(__qtreewidgetitem1);
+        treeWidgetProjectConstructions->setObjectName(QString::fromUtf8("treeWidgetProjectConstructions"));
 
-        horizontalLayout_8->addWidget(treeWidgetProjectConstruction);
+        horizontalLayout_8->addWidget(treeWidgetProjectConstructions);
 
-        tableViewProjectSupplies = new QTableView(verticalLayoutWidget_3);
-        tableViewProjectSupplies->setObjectName(QString::fromUtf8("tableViewProjectSupplies"));
+        treeWidgetProjectSupplies = new QTreeWidget(verticalLayoutWidget_3);
+        treeWidgetProjectSupplies->setObjectName(QString::fromUtf8("treeWidgetProjectSupplies"));
 
-        horizontalLayout_8->addWidget(tableViewProjectSupplies);
+        horizontalLayout_8->addWidget(treeWidgetProjectSupplies);
 
 
         verticalLayout_3->addLayout(horizontalLayout_8);
@@ -328,13 +327,13 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_9);
 
+        treeWidgetProjectMembers = new QTreeWidget(verticalLayoutWidget_3);
+        treeWidgetProjectMembers->setObjectName(QString::fromUtf8("treeWidgetProjectMembers"));
+
+        verticalLayout_3->addWidget(treeWidgetProjectMembers);
+
         horizontalLayout_10 = new QHBoxLayout();
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
-        tableWidgetProjectMembers = new QTableWidget(verticalLayoutWidget_3);
-        tableWidgetProjectMembers->setObjectName(QString::fromUtf8("tableWidgetProjectMembers"));
-
-        horizontalLayout_10->addWidget(tableWidgetProjectMembers);
-
 
         verticalLayout_3->addLayout(horizontalLayout_10);
 
@@ -447,11 +446,11 @@ public:
 
         gridLayout->addWidget(label_9, 0, 0, 1, 1);
 
-        listView = new QListView(gridLayoutWidget);
-        listView->setObjectName(QString::fromUtf8("listView"));
-        listView->setMinimumSize(QSize(500, 0));
+        listViewSearchResults = new QListView(gridLayoutWidget);
+        listViewSearchResults->setObjectName(QString::fromUtf8("listViewSearchResults"));
+        listViewSearchResults->setMinimumSize(QSize(500, 0));
 
-        gridLayout->addWidget(listView, 2, 1, 1, 1);
+        gridLayout->addWidget(listViewSearchResults, 2, 1, 1, 1);
 
         label_18 = new QLabel(gridLayoutWidget);
         label_18->setObjectName(QString::fromUtf8("label_18"));
@@ -475,7 +474,7 @@ public:
 
         retranslateUi(MainWindowProjectMember);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindowProjectMember);
@@ -494,6 +493,11 @@ public:
         labelProjectName->setText(QApplication::translate("MainWindowProjectMember", "Project Name", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindowProjectMember", "Twoje konstrukcje:", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("MainWindowProjectMember", "Twoje zasoby:", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem = treeWidgetUserSupplies->headerItem();
+        ___qtreewidgetitem->setText(3, QApplication::translate("MainWindowProjectMember", "Miejsce", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem->setText(2, QApplication::translate("MainWindowProjectMember", "Typ", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem->setText(1, QApplication::translate("MainWindowProjectMember", "Producent", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindowProjectMember", "Nazwa", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindowProjectMember", "Lista pr\303\263\305\233b oczekuj\304\205cych:", 0, QApplication::UnicodeUTF8));
         pushButtonDeleteRequest->setText(QApplication::translate("MainWindowProjectMember", "Usu\305\204 pro\305\233b\304\231", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindowProjectMember", "Tab 1", 0, QApplication::UnicodeUTF8));
@@ -503,7 +507,18 @@ public:
         labelProjectName_2->setText(QApplication::translate("MainWindowProjectMember", "Project Name", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("MainWindowProjectMember", "Konstrukcje w projekcie:", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("MainWindowProjectMember", "Zasoby projektu:", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem1 = treeWidgetProjectSupplies->headerItem();
+        ___qtreewidgetitem1->setText(6, QApplication::translate("MainWindowProjectMember", "Miejsce", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(5, QApplication::translate("MainWindowProjectMember", "Nazwisko", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(4, QApplication::translate("MainWindowProjectMember", "Imie", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(3, QApplication::translate("MainWindowProjectMember", "Konstrukcja", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(2, QApplication::translate("MainWindowProjectMember", "Typ", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(1, QApplication::translate("MainWindowProjectMember", "Producent", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindowProjectMember", "Nazwa", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindowProjectMember", "Cz\305\202onkowie projektu:", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem2 = treeWidgetProjectMembers->headerItem();
+        ___qtreewidgetitem2->setText(1, QApplication::translate("MainWindowProjectMember", "Nazwisko", 0, QApplication::UnicodeUTF8));
+        ___qtreewidgetitem2->setText(0, QApplication::translate("MainWindowProjectMember", "Imie", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindowProjectMember", "Tab 2", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("MainWindowProjectMember", "TextLabel", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindowProjectMember", "TextLabel", 0, QApplication::UnicodeUTF8));

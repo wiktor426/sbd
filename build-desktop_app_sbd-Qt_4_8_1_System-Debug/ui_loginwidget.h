@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'loginwidget.ui'
 **
-** Created: Mon Jan 12 19:09:28 2015
+** Created: Sun Jan 25 00:21:03 2015
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -79,8 +79,8 @@ public:
     void retranslateUi(QWidget *LoginWidget)
     {
         LoginWidget->setWindowTitle(QApplication::translate("LoginWidget", "Form", 0, QApplication::UnicodeUTF8));
-        lineEditUserLogin->setText(QApplication::translate("LoginWidget", "Login", 0, QApplication::UnicodeUTF8));
-        lineEditUserPassword->setText(QApplication::translate("LoginWidget", "Has\305\202o", 0, QApplication::UnicodeUTF8));
+        lineEditUserLogin->setText(QApplication::translate("LoginWidget", "1", 0, QApplication::UnicodeUTF8));
+        lineEditUserPassword->setText(QApplication::translate("LoginWidget", "haslo123", 0, QApplication::UnicodeUTF8));
         pushButtonLogin->setText(QApplication::translate("LoginWidget", "Zaloguj", 0, QApplication::UnicodeUTF8));
         pushButtonChangePassword->setText(QApplication::translate("LoginWidget", "Zmie\305\204 has\305\202o", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

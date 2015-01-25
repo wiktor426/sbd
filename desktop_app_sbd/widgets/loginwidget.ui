@@ -26,14 +26,14 @@
     <item>
      <widget class="QLineEdit" name="lineEditUserLogin">
       <property name="text">
-       <string>Login</string>
+       <string>1</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="lineEditUserPassword">
       <property name="text">
-       <string>Hasło</string>
+       <string>haslo123</string>
       </property>
      </widget>
     </item>

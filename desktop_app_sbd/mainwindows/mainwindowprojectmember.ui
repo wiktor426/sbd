@@ -99,12 +99,12 @@
      <rect>
       <x>200</x>
       <y>0</y>
-      <width>691</width>
+      <width>771</width>
       <height>481</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -159,7 +159,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QTreeWidget" name="treeWidgetUserConstruction">
+          <widget class="QTreeWidget" name="treeWidgetUserConstructions">
            <column>
             <property name="text">
              <string notr="true">1</string>
@@ -168,7 +168,28 @@
           </widget>
          </item>
          <item>
-          <widget class="QTableView" name="tableViewUserSupplies"/>
+          <widget class="QTreeWidget" name="treeWidgetUserSupplies">
+           <column>
+            <property name="text">
+             <string>Nazwa</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Producent</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Typ</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Miejsce</string>
+            </property>
+           </column>
+          </widget>
          </item>
         </layout>
        </item>
@@ -209,7 +230,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>471</width>
+        <width>761</width>
         <height>391</height>
        </rect>
       </property>
@@ -271,7 +292,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QTreeWidget" name="treeWidgetProjectConstruction">
+          <widget class="QTreeWidget" name="treeWidgetProjectConstructions">
            <column>
             <property name="text">
              <string notr="true">1</string>
@@ -280,7 +301,43 @@
           </widget>
          </item>
          <item>
-          <widget class="QTableView" name="tableViewProjectSupplies"/>
+          <widget class="QTreeWidget" name="treeWidgetProjectSupplies">
+           <column>
+            <property name="text">
+             <string>Nazwa</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Producent</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Typ</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Konstrukcja</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Imie</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nazwisko</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Miejsce</string>
+            </property>
+           </column>
+          </widget>
          </item>
         </layout>
        </item>
@@ -296,11 +353,21 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_10">
-         <item>
-          <widget class="QTableWidget" name="tableWidgetProjectMembers"/>
-         </item>
-        </layout>
+        <widget class="QTreeWidget" name="treeWidgetProjectMembers">
+         <column>
+          <property name="text">
+           <string>Imie</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nazwisko</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10"/>
        </item>
       </layout>
      </widget>
@@ -505,7 +572,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QListView" name="listView">
+        <widget class="QListView" name="listViewSearchResults">
          <property name="minimumSize">
           <size>
            <width>500</width>

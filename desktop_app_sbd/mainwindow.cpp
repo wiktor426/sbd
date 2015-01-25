@@ -60,6 +60,7 @@ bool MainWindow::login(QString id, QString password){
         project_member_ui->project_name=query2.value(0).toString();
         project_member_ui->show();
         login_widget->hide();
+        project_member_ui->userLogged();
         project_member_ui->refreshLabels();
     }else{
         QErrorMessage message;
